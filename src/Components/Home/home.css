@@ -1,0 +1,496 @@
+:root {
+    --primary-white: rgb(226 232 240);
+    --secondary-white: #94A3B8;
+}
+
+.c-poiner {
+    cursor: pointer;
+}
+
+.flashlight-overlay {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    mix-blend-mode: lighten;
+    z-index: 2;
+    transition: background-position 0.05s ease;
+}
+
+
+.home-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6rem 0;
+    min-height: 100dvh;
+
+}
+
+.home-container>div:nth-child(1) {
+    position: sticky;
+    top: 6rem;
+    width: 48%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
+    text-align: left;
+}
+
+
+.home-container>div:nth-child(1)>div {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+.home-container>div:nth-child(1)>div:nth-child(2) {
+    margin: 20px 0;
+}
+
+.home-container>div:nth-child(1)>div>h1,
+.role-txt {
+    color: var(--primary-white);
+}
+
+.home-container>div:nth-child(1)>div>h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0 0 10px 0;
+
+    line-height: 1;
+}
+
+.desc-txt {
+    color: var(--secondary-white);
+    font-size: 14px;
+    width: 80%;
+    line-height: 2;
+    margin: 0;
+}
+
+
+
+.home-container>div:nth-child(1)>div:nth-child(2)>a::before {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    height: 1px;
+    width: 32px;
+    transition: 0.2s all ease;
+    background-color: #64748B;
+}
+
+.home-container>div:nth-child(1)>div:nth-child(2)>a {
+    border: unset;
+    background-color: transparent;
+    position: relative;
+    text-decoration: none;
+    display: block;
+    margin: 14px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #64748B;
+    transition: 0.2s all ease;
+    font-size: 12px;
+    font-weight: 700;
+    padding-left: 40px;
+}
+
+.home-container>div:nth-child(1)>div:nth-child(2)>a:hover {
+    padding-left: 70px;
+    color: var(--primary-white) !important;
+}
+
+.active-nav-link {
+    padding-left: 70px !important;
+    color: var(--primary-white) !important;
+}
+
+.active-nav-link::before {
+    width: 64px !important;
+    background-color: var(--primary-white) !important;
+}
+
+
+
+.home-container>div:nth-child(1)>div:nth-child(2)>a:hover::before {
+    width: 64px;
+    background-color: var(--primary-white) !important;
+}
+
+
+.home-container>div:nth-child(1)>div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.home-container>div:nth-child(1)>div:nth-child(3)>a {
+    color: var(--secondary-white);
+    font-weight: 700;
+    font-size: 24px;
+
+    transition: 0.2s all ease;
+}
+
+
+.home-container>div:nth-child(1)>div:nth-child(3)>a:hover {
+    color: var(--primary-white);
+}
+
+.home-container>div:nth-child(1)>div:nth-child(3)>a:nth-child(1) {
+    margin-right: 10px;
+}
+
+.home-container>div:nth-child(1)>div:nth-child(3)>a:not(:nth-child(1)) {
+    margin: 0 10px;
+}
+
+.main-section {
+    width: 50%;
+}
+
+#about,
+#skills,
+#experience,
+#projects {
+    scroll-margin-top: 6rem;
+    padding-bottom: 30px;
+}
+
+#experience {
+    scroll-margin-top: 4rem;
+}
+
+
+
+#about>P {
+    color: var(--secondary-white);
+    line-height: 2;
+    margin: 0 0 20px 0;
+}
+
+.bright-text {
+    color: var(--primary-white);
+}
+
+#experience {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card {
+    width: 100%;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+    gap: 1rem;
+    box-sizing: border-box;
+    transition: 0.3s all ease;
+    position: relative;
+    overflow: visible;
+    z-index: 1;
+}
+
+.desc-ul {
+    max-height: 200px;
+    padding-right: 6px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.desc-ul::-webkit-scrollbar {
+
+    width: 2px;
+}
+
+.desc-ul::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.desc-ul::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.desc-ul::-webkit-scrollbar-thumb {
+
+    background-color: rgba(45, 212, 191, .1);
+    ;
+}
+
+
+.experience-card:hover {
+    opacity: 1;
+}
+
+.experience-card:hover::before {
+    opacity: 1;
+}
+
+.experience-card::before {
+    content: "";
+    position: absolute;
+    height: auto;
+    left: -40px;
+    right: -40px;
+    top: -10px;
+
+    bottom: -20px;
+    background-color: #1e293b;
+    border-radius: 8px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.experience-card.blurred {
+    filter: blur(3px);
+
+    z-index: 0;
+}
+
+.experience-card.focused {
+    filter: none;
+    z-index: 2;
+    position: relative;
+}
+
+
+.experience-card p {
+    color: var(--secondary-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+
+.experience-card>div:nth-child(1) {
+
+    grid-column: span 3/span 3;
+}
+
+.experience-card>div:nth-child(2) {
+    grid-column: span 6/span 6;
+}
+
+.exp-title {
+    text-decoration: unset;
+    color: var(--primary-white) !important;
+}
+
+.skills-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.skills-chip {
+    margin: 0 10px 0 0;
+    background-color: rgba(45, 212, 191, .1);
+    padding: .25rem .75rem;
+    border-radius: 12px;
+
+
+}
+
+.skills-chip p {
+    color: rgb(94 234 212);
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    font-size: 0.75rem;
+}
+
+.skills-chip:first-child {
+    margin: 0 10px 0 0;
+}
+
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.desc-project {
+    margin: 0;
+    color: var(--secondary-white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.project-icon {
+    margin-top: 8px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.link-div{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.link-div > a {
+    color: var(--secondary-white);
+    text-decoration: none;
+    margin-right: 10px;
+    transition: 0.4s all ease;
+}
+.link-div > a:hover {
+    color: var(--primary-white);
+}
+
+.desc-hide {
+    height: 200px;
+}
+
+
+.mobile-header {
+    display: none;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.skill-card {
+    padding: 0 20px;
+    grid-column: span 3 / span 3;
+    border-radius: 8px;
+
+    background-color: rgba(45, 212, 191, .1);
+}
+
+.skill-card>p {
+    color: rgb(94 234 212);
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.skill-card>ul li {
+    list-style-type: none;
+    color: var(--secondary-white);
+    margin: 5px 0;
+}
+
+
+.resume-btn:hover {
+    background-color: rgba(45, 212, 191, .5);
+}
+
+.resume-btn{
+    background-color: rgba(45, 212, 191, .1);
+    cursor: pointer;
+    transition: 0.3s all linear;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-white);
+    border-radius: 50%;
+    position: fixed;
+    border: unset;
+    bottom: 5%;
+    height: 60px;
+    width: 60px;
+    right: 50px;
+    font-size: 22px;
+    z-index: 9999;
+}
+
+
+@media screen and (max-width : 1100px) {
+    
+.desc-txt {
+width: 100%;
+}
+    .home-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: unset;
+        padding: 1rem 0;
+        height: auto;
+
+    }
+
+    .home-container>div:nth-child(1) {
+        position: static;
+        height: auto;
+        top: 0;
+        width: auto;
+        left: 0;
+    }
+
+    .main-section {
+        width: 100%;
+    }
+
+    .home-container>div:nth-child(1)>div:nth-child(2) {
+        display: none;
+    }
+
+    .home-container>div:nth-child(1)>div:nth-child(3) {
+        margin: 20px 0;
+    }
+
+    #about,
+    #experience,
+    #projects,
+    #skills {
+        padding-top: 3rem;
+    }
+}
+
+@media screen and (max-width : 640px) {
+    .experience-card {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card>div:nth-child(1) {
+        grid-column: span 8 /span 8;
+    }
+
+    .mobile-header {
+        display: block;
+        margin: 20px 0;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: var(--primary-white);
+        transition: 0.2s all ease;
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+
+    .experience-card.blurred {
+        filter: unset;
+        z-index: unset;
+    }
+
+    .experience-card.focused {
+        z-index: inherit;
+    }
+
+}
