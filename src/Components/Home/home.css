@@ -190,7 +190,7 @@
 
 .experience-card {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-columns: repeat(9, minmax(0, 1fr));
     gap: 1rem;
@@ -280,6 +280,7 @@
 
 .experience-card>div:nth-child(2) {
     grid-column: span 6/span 6;
+    
 }
 
 .exp-title {
@@ -290,6 +291,7 @@
 .skills-section {
     display: flex;
     flex-wrap: wrap;
+    gap: 1rem;
 }
 
 
@@ -341,16 +343,34 @@
 }
 
 
+.link-div > a::before {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    content: '';
+    height: 1px;
+    
+    transition: 0.4s all ease;
+    background-color: var(--secondary-white);
+}
+
 .link-div > a {
+    position: relative;
+    
     color: var(--secondary-white);
     text-decoration: none;
-    margin-right: 10px;
+    
+    margin-right: 16px;
     transition: 0.4s all ease;
 }
 .link-div > a:hover {
     color: var(--primary-white);
 }
 
+.link-div > a:hover::before{
+    background-color: var(--primary-white);
+}
 .desc-hide {
     height: 200px;
 }
@@ -379,6 +399,10 @@
     text-transform: capitalize;
     font-size: 15px;
     font-weight: 500;
+}
+
+.skill-card>ul {
+    gap : 1rem;
 }
 
 .skill-card>ul li {
@@ -416,6 +440,8 @@
 
 @media screen and (max-width : 1100px) {
     
+
+
 .desc-txt {
 width: 100%;
 }
@@ -459,6 +485,14 @@ width: 100%;
 }
 
 @media screen and (max-width : 640px) {
+
+    .resume-btn {
+        right: 20px;
+    }
+    
+    .experience-card>div:nth-child(2) {
+     grid-column: span 8 /span 8;   
+    }
     .experience-card {
         grid-template-columns: 1fr;
         height: auto;
