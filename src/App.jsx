@@ -23,7 +23,7 @@ function App() {
         }}
       />
       <div className="app-wrapper">
-        <Routes>
+        <Routes >
           <Route path="/" element={<Home />}  />
           <Route path="/experience" element={<Experience />} />
         </Routes>
