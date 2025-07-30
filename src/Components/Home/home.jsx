@@ -8,6 +8,8 @@ import Skull from "../../assets/Project-Pictures/Skull-Thumbnail.jpg";
 import { LuDownload } from "react-icons/lu";
 import { useNavigate } from "react-router-dom";
 
+import VigneshPDF from "../../assets/Resume/Vignesh.pdf";
+
 export default function Home() {
   const experience = [
     {
@@ -16,7 +18,7 @@ export default function Home() {
       company: "Comapny name",
       description: [],
       skills: ["Angular", "Nodejs", "ExpressJs", "MongoDB"],
-      isExperienceSection : true
+      isExperienceSection: true,
     },
     {
       year: "Dec 2024 - Mar 2025 ",
@@ -29,7 +31,7 @@ export default function Home() {
       ],
 
       skills: ["HTML", "CSS", "Bootstrap", "Javascript", "PHP"],
-      isExperienceSection : false
+      isExperienceSection: false,
     },
   ];
 
@@ -71,7 +73,7 @@ export default function Home() {
       name: "Tomato Bites",
       img: TomatoImg,
       stack: "MERN",
-      projectLink : "https://food-order-c58e.onrender.com/delivery" ,
+      projectLink: "https://food-order-c58e.onrender.com/delivery",
       desc: [
         " Designed and implemented RESTful APIs using Node.js and Express.js to manage user authentication, orders, and food delivery services.",
         "Integrated Real-time Geolocation Tracking to fetch user’s current locations and designed a Search feature enabling users to find food items or restaurants efficiently. ",
@@ -80,15 +82,15 @@ export default function Home() {
         "Improved application performance by compressing images, implementing lazy loading on images and necessary components , resulting in faster load times and a smoother user experience.",
         "Implemented JWT-based authentication for secure user login and registration, along with order history tracking to enable users to view and manage past purchases.",
       ],
-      
-      ghLink : "https://github.com/vickynot-10/Food-Order-",
-      livelink : "https://food-order-c58e.onrender.com/delivery"
+
+      ghLink: "https://github.com/vickynot-10/Food-Order-",
+      livelink: "https://food-order-c58e.onrender.com/delivery",
     },
     {
       name: "SkullCandy Clone",
       img: Skull,
-      
-      projectLink : "https://skullcandy-completed.onrender.com/" ,
+
+      projectLink: "https://skullcandy-completed.onrender.com/",
       stack: "Nodejs , MongoDB",
       desc: [
         "Developed and optimized RESTful APIs using Node.js and Express.js to handle user authentication, product purchases, and cart management.",
@@ -96,12 +98,10 @@ export default function Home() {
         "Integrated a MongoDB database to store user profiles for authentication, login management, and profile creation.",
         "Built a responsive UI with TailwindCSS, ensuring smooth user experiences across a variety of devices",
       ],
-      ghLink : "https://github.com/vickynot-10/SkullCandy-completed",
-      livelink : "https://skullcandy-completed.onrender.com/"
+      ghLink: "https://github.com/vickynot-10/SkullCandy-completed",
+      livelink: "https://skullcandy-completed.onrender.com/",
     },
   ];
-
-
 
   const experienceRefs = useRef([]);
   experienceRefs.current = [];
@@ -153,23 +153,17 @@ export default function Home() {
     { title: "tools", val: ["Git"] },
   ];
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  function Navigate(){
-navigate('/experience')
+  function Navigate() {
+    navigate("/experience");
   }
 
   return (
-    <div
-      style={{ height: "100%", width: "100%" }}
-
-    >
-      <button className="resume-btn">
-        
+    <div style={{ height: "100%", width: "100%" }}>
+      <a href={VigneshPDF} download="Vignesh-Resume.pdf" className="resume-btn">
         <LuDownload />
-      </button>
-
-      
+      </a>
 
       <div className="home-container">
         <div>
@@ -278,7 +272,12 @@ navigate('/experience')
             <h6 className="mobile-header">Experience</h6>
             {experience.map((item, ind) => {
               return (
-                <div onClick={item.isExperienceSection && Navigate}  key={ind} className="experience-card c-poiner" ref={addToRefs}>
+                <div
+                  onClick={item.isExperienceSection && Navigate}
+                  key={ind}
+                  className="experience-card c-poiner"
+                  ref={addToRefs}
+                >
                   <div>
                     <p> {item.year} </p>
                   </div>
@@ -316,17 +315,26 @@ navigate('/experience')
             {projectDetails.flatMap((item, ind) => {
               return (
                 <div key={ind} className="experience-card" ref={addToRefs}>
-                  <div 
-                       >
+                  <div>
                     <img
                       src={item.img}
                       alt="project-pic"
                       className="project-icon"
                     />
-                    
                   </div>
                   <div>
-                    <Link to={ item.projectLink.trim() === '' ? '#projects' : item.projectLink } target={item.projectLink.trim() === '' ? '_self' : '_blank'} className="exp-title" style={{ margin: 0 }}>
+                    <Link
+                      to={
+                        item.projectLink.trim() === ""
+                          ? "#projects"
+                          : item.projectLink
+                      }
+                      target={
+                        item.projectLink.trim() === "" ? "_self" : "_blank"
+                      }
+                      className="exp-title"
+                      style={{ margin: 0 }}
+                    >
                       {item.name} | {item.stack}
                     </Link>
                     <ul className="desc-ul">
@@ -338,10 +346,16 @@ navigate('/experience')
                         );
                       })}
                     </ul>
-                    <div className="link-div" >
-                      <Link to={item.livelink} target="_blank" > Live Link </Link>
-                      <Link to={item.ghLink} target="_blank" > Github Link </Link>
-                      </div>
+                    <div className="link-div">
+                      <Link to={item.livelink} target="_blank">
+                        {" "}
+                        Live Link{" "}
+                      </Link>
+                      <Link to={item.ghLink} target="_blank">
+                        {" "}
+                        Github Link{" "}
+                      </Link>
+                    </div>
                   </div>
                 </div>
               );
