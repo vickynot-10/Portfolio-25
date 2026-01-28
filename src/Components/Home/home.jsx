@@ -16,8 +16,16 @@ export default function Home() {
       year: "Mar 2025 - Present ",
       role: "Software Developer",
       company: "Comapny name",
-      description: [],
-      skills: ["Angular", "Nodejs", "ExpressJs", "MongoDB"],
+      description: [
+        `Developed full-stack web applications using Angular/Next.js, Node.js, and MongoDB, delivering production-ready
+features end-to-end.`,
+        `Implemented real-time communication using Socket.IO and event-driven APIs to update UI based on live data
+changes.`,
+        `Designed and structured REST APIs and database models to support scalable and maintainable backend services.`,
+        `Collaborated with cross-functional teams across frontend and backend development to integrate APIs, real-time
+features, and user interfaces.`,
+      ],
+      skills: ["Angular", "Nextjs", "Nodejs", "ExpressJs", "MongoDB"],
       isExperienceSection: true,
     },
     {
@@ -46,7 +54,7 @@ export default function Home() {
 
   useEffect(() => {
     const sections = document.querySelectorAll(
-      "#about,#experience,#projects,#skills"
+      "#about,#experience,#projects,#skills",
     );
     const observer = new IntersectionObserver(
       (entries) => {
@@ -59,7 +67,7 @@ export default function Home() {
       {
         rootMargin: "0px",
         threshold: 0.6,
-      }
+      },
     );
     sections.forEach((section) => observer.observe(section));
 
@@ -70,36 +78,46 @@ export default function Home() {
 
   const projectDetails = [
     {
-      name: "Tomato Bites",
-      img: TomatoImg,
-      stack: "MERN",
-      projectLink: "https://food-order-c58e.onrender.com/delivery",
-      desc: [
-        " Designed and implemented RESTful APIs using Node.js and Express.js to manage user authentication, orders, and food delivery services.",
-        "Integrated Real-time Geolocation Tracking to fetch user’s current locations and designed a Search feature enabling users to find food items or restaurants efficiently. ",
-        "Implemented cookie-based authentication and CORS policies to ensure secure and seamless communication between frontend and backend.",
-        "Optimized API performance by structuring routes efficiently and implementing middleware for authentication and request handling",
-        "Improved application performance by compressing images, implementing lazy loading on images and necessary components , resulting in faster load times and a smoother user experience.",
-        "Implemented JWT-based authentication for secure user login and registration, along with order history tracking to enable users to view and manage past purchases.",
-      ],
+      name: "ProfluxIOT IOT Management",
+      company_name : "AAPGS Private Limited",
+      stack: ["Angular","ECharts","Gridster3","FoblexFlow","Nodejs","Expressjs","Socket.io","MongoDB","Redis"],
+      desc:[
+  "Built a scalable IoT management system with multi-tenant architecture, implementing dynamic database switching based on user JWT authentication.",
+  "Designed and developed CRUD modules for devices, categories, and location hierarchy (site → floor → device mapping).",
+  "Implemented a dynamic dashboard builder allowing users to drag & drop widgets (charts, tables, gauges) using Gridster3.",
+  "Developed configurable ECharts widgets (line, bar, pie, stacked, gauge, table) with dynamic input mapping (X/Y, multi-axis, thresholds).",
+  "Optimized dashboard performance using Socket.IO push updates, ChangeDetectionStrategy.OnPush, and incremental chart updates via setOption(false).",
+  "Used Map data structures instead of arrays for faster widget lookups and improved UI rendering performance.",
+  "Implemented real-time device data streaming using WebSockets, updating only recent data points (50–100) to keep UI responsive.",
+  "Leveraged MongoDB Time Series collections for high-frequency device data ingestion and efficient querying.",
+  "Designed a Redis-first ingestion strategy, batching inserts via background workers (insertMany) to reduce database load.",
+  "Prevented race conditions using Redis NX locks and reduced redundant DB queries by caching dashboard configurations.",
+  "Built a rule-based automation engine using FoblexFlow with conditional nodes (AND/OR), HTTP, Email, WhatsApp actions.",
+  "Implemented retry logic, delay counters, threshold-based triggers, and execution history logging for automations.",
+  "Created stress-testing scripts to simulate high-volume device data ingestion and validate system scalability."
+]
 
-      ghLink: "https://github.com/vickynot-10/Food-Order-",
-      livelink: "https://food-order-c58e.onrender.com/delivery",
+      
     },
     {
-      name: "SkullCandy Clone",
-      img: Skull,
+      name: "Keepwisely Asset Managemnt",
+      company_name : "AAPGS Private Limited",
 
-      projectLink: "https://skullcandy-completed.onrender.com/",
-      stack: "Nodejs , MongoDB",
+       stack: ["Angular","OLAMaps API", "ECharts","Gridster3","Nodejs","Expressjs","Socket.io","MongoDB"],
+  
       desc: [
-        "Developed and optimized RESTful APIs using Node.js and Express.js to handle user authentication, product purchases, and cart management.",
-        "Designed protected routes using middleware-based token verification, ensuring secure transactions and data integrity.",
-        "Integrated a MongoDB database to store user profiles for authentication, login management, and profile creation.",
-        "Built a responsive UI with TailwindCSS, ensuring smooth user experiences across a variety of devices",
-      ],
-      ghLink: "https://github.com/vickynot-10/SkullCandy-completed",
-      livelink: "https://skullcandy-completed.onrender.com/",
+  "Developed a custom analytics platform enabling users to create widgets by writing MongoDB queries with enforced response schemas.",
+  "Built an admin query editor using CodeMirror and Prettier with validation for chart/table compatibility.",
+  "Safely executed stored queries using Node.js worker processes, isolating runtime execution from the main thread.",
+  "Implemented dynamic dashboard rendering, converting serialized queries into valid MongoDB queries at runtime.",
+  "Designed drag-and-drop dashboards where users can reuse admin-created widgets with live filters.",
+  "Integrated Ola Maps API to display real-time asset locations with dynamic latitude/longitude updates.",
+  "Enabled live GPS tracking by streaming coordinates from Flutter mobile apps via Socket.IO to Angular dashboards.",
+  "Implemented real-time map markers and asset detail popups synchronized with backend updates.",
+  "Integrated live video streaming using WebRTC (Flutter → Node → Angular) for real-time asset monitoring.",
+  "Built reusable dynamic modules for widgets, maps, and filters to support future scalability."
+]
+   
     },
   ];
 
@@ -147,7 +165,7 @@ export default function Home() {
     { title: "languages", val: ["Python", "Javascript", "Typescript"] },
     {
       title: "frameworks and libraries",
-      val: ["React", "Angular", "Expressjs", "Nodejs"],
+      val: ["React", "Angular", "Nextjs", "Expressjs", "Nodejs", "Socket.io"],
     },
     { title: "database", val: ["MongoDB", "MySQL"] },
     { title: "tools", val: ["Git"] },
@@ -256,12 +274,20 @@ export default function Home() {
               {skills.map((item, ind) => {
                 return (
                   <div key={ind} className="skill-card">
-                    <p> {item.title} </p>
-                    <ul>
+                    <p style={{ padding: 0, margin: 0, marginBottom: "10px" }}>
+                      {" "}
+                      {item.title}{" "}
+                    </p>
+                    <div className="points-div">
                       {item.val.map((el, i) => {
-                        return <li key={i}> {el} </li>;
+                        return (
+                          <span className="list-points" key={i}>
+                            {" "}
+                            {el}{" "}
+                          </span>
+                        );
                       })}
-                    </ul>
+                    </div>
                   </div>
                 );
               })}
@@ -316,27 +342,17 @@ export default function Home() {
               return (
                 <div key={ind} className="experience-card" ref={addToRefs}>
                   <div>
-                    <img
-                      src={item.img}
-                      alt="project-pic"
-                      className="project-icon"
-                    />
+                    <p className="m-0 p-0" > {item.company_name} </p>
                   </div>
                   <div>
-                    <Link
-                      to={
-                        item.projectLink.trim() === ""
-                          ? "#projects"
-                          : item.projectLink
-                      }
-                      target={
-                        item.projectLink.trim() === "" ? "_self" : "_blank"
-                      }
+                    <span
+                    
+                      
                       className="exp-title"
                       style={{ margin: 0 }}
                     >
-                      {item.name} | {item.stack}
-                    </Link>
+                      {item.name}
+                    </span>
                     <ul className="desc-ul">
                       {item.desc.map((el, i) => {
                         return (
@@ -346,22 +362,28 @@ export default function Home() {
                         );
                       })}
                     </ul>
-                    <div className="link-div">
-                      <Link to={item.livelink} target="_blank">
-                        {" "}
-                        Live Link{" "}
-                      </Link>
-                      <Link to={item.ghLink} target="_blank">
-                        {" "}
-                        Github Link{" "}
-                      </Link>
+
+                       <div className="skills-section">
+                      {item.stack.map((el, i) => {
+                        return (
+                          <div key={i} className="skills-chip">
+                            <p>{el} </p>
+                          </div>
+                        );
+                      })}
                     </div>
+                  
                   </div>
                 </div>
               );
             })}
           </div>
+
+             <Link to="projects" className="view-all-projects" >
+        View Full Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>  </Link>
         </div>
+
+     
       </div>
     </div>
   );

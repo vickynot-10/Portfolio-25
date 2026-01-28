@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./Components/Home/home";
-import Experience from "./Components/Experience/experience";
+import Projects from "./Components/Experience/experience";
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
@@ -25,7 +25,7 @@ function App() {
       <div className="app-wrapper">
         <Routes >
           <Route path="/" element={<Home />}  />
-          <Route path="/experience" element={<Experience />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </div>
     </div>
