@@ -25,7 +25,7 @@
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 2rem;
 }
@@ -207,4 +207,35 @@ td {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Optional: cleaner scrollbar */
+.table-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(45, 212, 191, 0.3);
+  border-radius: 4px;
+}
+
+
+table {
+  min-width: 700px;
+  border-collapse: collapse;
+}
+
+
+
+@media screen and (max-width :440px) {
+ 
+  .experience-comp-container  {
+    width: 100%;
+  }
+  
 }

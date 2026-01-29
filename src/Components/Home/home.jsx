@@ -14,8 +14,8 @@ export default function Home() {
   const experience = [
     {
       year: "Mar 2025 - Present ",
-      role: "Software Developer",
-      company: "Comapny name",
+      role: "Software Engineer",
+      company: "AAPGS Private Limited",
       description: [
         `Developed full-stack web applications using Angular/Next.js, Node.js, and MongoDB, delivering production-ready
 features end-to-end.`,
@@ -31,7 +31,7 @@ features, and user interfaces.`,
     {
       year: "Dec 2024 - Mar 2025 ",
       role: "Web Developer",
-      company: "Company name",
+      company: "E-CareerPluz Private Limited",
       description: [
         "Designed and developed a comprehensive website offering digital services, business consulting, and legal advisory",
         "Developed backend functionality with PHP to handle email notifications, subscription emails, and contact form submissions and implemented responsive design techniques to ensure optimal user experience across devices",
@@ -79,45 +79,61 @@ features, and user interfaces.`,
   const projectDetails = [
     {
       name: "ProfluxIOT IOT Management",
-      company_name : "AAPGS Private Limited",
-      stack: ["Angular","ECharts","Gridster3","FoblexFlow","Nodejs","Expressjs","Socket.io","MongoDB","Redis"],
-      desc:[
-  "Built a scalable IoT management system with multi-tenant architecture, implementing dynamic database switching based on user JWT authentication.",
-  "Designed and developed CRUD modules for devices, categories, and location hierarchy (site → floor → device mapping).",
-  "Implemented a dynamic dashboard builder allowing users to drag & drop widgets (charts, tables, gauges) using Gridster3.",
-  "Developed configurable ECharts widgets (line, bar, pie, stacked, gauge, table) with dynamic input mapping (X/Y, multi-axis, thresholds).",
-  "Optimized dashboard performance using Socket.IO push updates, ChangeDetectionStrategy.OnPush, and incremental chart updates via setOption(false).",
-  "Used Map data structures instead of arrays for faster widget lookups and improved UI rendering performance.",
-  "Implemented real-time device data streaming using WebSockets, updating only recent data points (50–100) to keep UI responsive.",
-  "Leveraged MongoDB Time Series collections for high-frequency device data ingestion and efficient querying.",
-  "Designed a Redis-first ingestion strategy, batching inserts via background workers (insertMany) to reduce database load.",
-  "Prevented race conditions using Redis NX locks and reduced redundant DB queries by caching dashboard configurations.",
-  "Built a rule-based automation engine using FoblexFlow with conditional nodes (AND/OR), HTTP, Email, WhatsApp actions.",
-  "Implemented retry logic, delay counters, threshold-based triggers, and execution history logging for automations.",
-  "Created stress-testing scripts to simulate high-volume device data ingestion and validate system scalability."
-]
-
-      
+      company_name: "AAPGS Private Limited",
+      stack: [
+        "Angular",
+        "ECharts",
+        "Gridster3",
+        "FoblexFlow",
+        "Nodejs",
+        "Expressjs",
+        "Socket.io",
+        "MongoDB",
+        "Redis",
+      ],
+      desc: [
+        "Built a scalable IoT management system with multi-tenant architecture, implementing dynamic database switching based on user JWT authentication.",
+        "Designed and developed CRUD modules for devices, categories, and location hierarchy (site → floor → device mapping).",
+        "Implemented a dynamic dashboard builder allowing users to drag & drop widgets (charts, tables, gauges) using Gridster3.",
+        "Developed configurable ECharts widgets (line, bar, pie, stacked, gauge, table) with dynamic input mapping (X/Y, multi-axis, thresholds).",
+        "Optimized dashboard performance using Socket.IO push updates, ChangeDetectionStrategy.OnPush, and incremental chart updates via setOption(false).",
+        "Used Map data structures instead of arrays for faster widget lookups and improved UI rendering performance.",
+        "Implemented real-time device data streaming using WebSockets, updating only recent data points (50–100) to keep UI responsive.",
+        "Leveraged MongoDB Time Series collections for high-frequency device data ingestion and efficient querying.",
+        "Designed a Redis-first ingestion strategy, batching inserts via background workers (insertMany) to reduce database load.",
+        "Prevented race conditions using Redis NX locks and reduced redundant DB queries by caching dashboard configurations.",
+        "Built a rule-based automation engine using FoblexFlow with conditional nodes (AND/OR), HTTP, Email, WhatsApp actions.",
+        "Implemented retry logic, delay counters, threshold-based triggers, and execution history logging for automations.",
+        "Created stress-testing scripts to simulate high-volume device data ingestion and validate system scalability.",
+      ],
     },
     {
       name: "Keepwisely Asset Managemnt",
-      company_name : "AAPGS Private Limited",
+      company_name: "AAPGS Private Limited",
 
-       stack: ["Angular","OLAMaps API", "ECharts","Gridster3","Nodejs","Expressjs","Socket.io","MongoDB"],
-  
+      stack: [
+        "Angular",
+        "OLAMaps API",
+        "ECharts",
+        "Gridster3",
+        "Nodejs",
+        "Expressjs",
+        "Socket.io",
+        "MongoDB",
+      ],
+
       desc: [
-  "Developed a custom analytics platform enabling users to create widgets by writing MongoDB queries with enforced response schemas.",
-  "Built an admin query editor using CodeMirror and Prettier with validation for chart/table compatibility.",
-  "Safely executed stored queries using Node.js worker processes, isolating runtime execution from the main thread.",
-  "Implemented dynamic dashboard rendering, converting serialized queries into valid MongoDB queries at runtime.",
-  "Designed drag-and-drop dashboards where users can reuse admin-created widgets with live filters.",
-  "Integrated Ola Maps API to display real-time asset locations with dynamic latitude/longitude updates.",
-  "Enabled live GPS tracking by streaming coordinates from Flutter mobile apps via Socket.IO to Angular dashboards.",
-  "Implemented real-time map markers and asset detail popups synchronized with backend updates.",
-  "Integrated live video streaming using WebRTC (Flutter → Node → Angular) for real-time asset monitoring.",
-  "Built reusable dynamic modules for widgets, maps, and filters to support future scalability."
-]
-   
+        "Developed a custom analytics platform enabling users to create widgets by writing MongoDB queries with enforced response schemas.",
+        "Built an admin query editor using CodeMirror and Prettier with validation for chart/table compatibility.",
+        "Safely executed stored queries using Node.js worker processes, isolating runtime execution from the main thread.",
+        "Implemented dynamic dashboard rendering, converting serialized queries into valid MongoDB queries at runtime.",
+        "Designed drag-and-drop dashboards where users can reuse admin-created widgets with live filters.",
+        "Integrated Ola Maps API to display real-time asset locations with dynamic latitude/longitude updates.",
+        "Enabled live GPS tracking by streaming coordinates from Flutter mobile apps via Socket.IO to Angular dashboards.",
+        "Implemented real-time map markers and asset detail popups synchronized with backend updates.",
+        "Integrated live video streaming using WebRTC (Flutter → Node → Angular) for real-time asset monitoring.",
+        "Built reusable dynamic modules for widgets, maps, and filters to support future scalability.",
+      ],
     },
   ];
 
@@ -187,7 +203,7 @@ features, and user interfaces.`,
         <div>
           <div>
             <h1>Vignesh</h1>
-            <p className="role-txt">I am a Software Developer</p>
+            <p className="role-txt">I am a Software Engineer</p>
             <p className="desc-txt">
               I create accessible, pixel-perfect web experiences by building
               intuitive UIs, reliable backend systems, and efficient database
@@ -257,7 +273,7 @@ features, and user interfaces.`,
             </p>
 
             <p>
-              Currently, I'm a Software Developer at&nbsp;
+              Currently, I'm a Software Engineer at&nbsp;
               <span className="bright-text">AAPGS Private Limited</span>,
               specializing in accessibility. I contribute to the creation and
               maintenance of UI components, and develop admin dashboards and
@@ -342,15 +358,10 @@ features, and user interfaces.`,
               return (
                 <div key={ind} className="experience-card" ref={addToRefs}>
                   <div>
-                    <p className="m-0 p-0" > {item.company_name} </p>
+                    <p className="m-0 p-0"> {item.company_name} </p>
                   </div>
                   <div>
-                    <span
-                    
-                      
-                      className="exp-title"
-                      style={{ margin: 0 }}
-                    >
+                    <span className="exp-title" style={{ margin: 0 }}>
                       {item.name}
                     </span>
                     <ul className="desc-ul">
@@ -363,7 +374,7 @@ features, and user interfaces.`,
                       })}
                     </ul>
 
-                       <div className="skills-section">
+                    <div className="skills-section">
                       {item.stack.map((el, i) => {
                         return (
                           <div key={i} className="skills-chip">
@@ -372,18 +383,31 @@ features, and user interfaces.`,
                         );
                       })}
                     </div>
-                  
                   </div>
                 </div>
               );
             })}
           </div>
 
-             <Link to="projects" className="view-all-projects" >
-        View Full Projects <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>  </Link>
+          <Link to="projects" className="view-all-projects">
+            View Full Projects{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-move-right-icon lucide-move-right"
+            >
+              <path d="M18 8L22 12L18 16" />
+              <path d="M2 12H22" />
+            </svg>{" "}
+          </Link>
         </div>
-
-     
       </div>
     </div>
   );

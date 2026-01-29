@@ -63,83 +63,62 @@ export default function Projects() {
         "Built reusable dynamic modules for widgets, maps, and filters to support future scalability.",
       ],
     },
-      {
-    id: 3,
-    project: "Spicy Greens – Hotel & Dining Management",
-   madeAt: "AAPGS Private Limited",
-    stack: [
-      "Next.js",
-      "MongoDB",
-    ],
-    desc: [
-      "Built a full-stack hotel and dining management system with separate client and admin applications.",
-      "Implemented admin modules for managing hotels, food items, categories, availability status, and image galleries.",
-      "Enabled dining reservation functionality with automated email notifications using Nodemailer.",
-      "Designed customizable email templates allowing admins to send manual or automated responses to users.",
-      "Implemented JWT cookie-based authentication with secure sign-up and sign-in flows for users and admins.",
-      "Optimized performance by implementing lazy loading for images using Intersection Observer API.",
-      "Reduced initial load time by optimizing menu and product data fetching strategies."
-    ]
-  },
-  {
-    id: 4,
-    project: "E-Digicard – Digital Business Card Platform",
-  madeAt: "AAPGS Private Limited",
-    stack: [
-      "Next.js",
-      "MongoDB"
-    ],
-    desc: [
-      "Developed a multi-user digital business card platform with dynamic content rendering based on user IDs.",
-      "Built an admin panel to manage products and embed YouTube videos dynamically.",
-      "Implemented a feedback module to collect user responses and improve engagement.",
-      "Designed a scalable content structure to support multiple users and personalized profiles."
-    ]
-  },
-  {
-    id: 5,
-    project: "OKR",
-    madeAt: "AAPGS Private Limited",
-    stack: [
-      "Angular",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Socket.io"
-      
-    ],
-    desc: [
-      "Developed a real-time chat module supporting one-to-one chats, group chats, and contact lists.",
-      "Implemented real-time messaging using Socket.IO with support for images, files, and shared links.",
-      "Designed user profile views displaying grouped media such as images, files, and shared links for better UX.",
-      "Added emoji reactions, message editing, and delete functionality to improve chat usability.",
-      "Integrated browser notifications with sound alerts to notify users of new messages across the app.",
-      "Initialized global socket connections to ensure notifications work outside the active chat view."
-    ]
-  },
-  {
-  id: 6,
-  project: "Expense Tracker",
-  madeAt: "AAPGS Private Limited",
-  stack: [
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Angular",
-    "OneSignal"
-  ],
-  desc: [
-    "Developed backend APIs for a personal and group-based expense tracking application using Node.js and Express.",
-    "Collaborated with Flutter developers to design and implement APIs for dashboards, transactions, expenses, and group management.",
-    "Implemented group features including referral code invitations, shared expenses, and group transaction tracking.",
-    "Built notification infrastructure using OneSignal for real-time alerts and reminders.",
-    "Created cron-based APIs to trigger upcoming payment and expense reminders with push notifications.",
-    "Developed an Angular-based admin panel to manage custom expense categories dynamically.",
-    "Built an admin analytics dashboard displaying differentiated user metrics such as country-wise and gender-wise usage.",
-    
-  ]
-}
-
+    {
+      id: 3,
+      project: "Spicy Greens – Hotel & Dining Management",
+      madeAt: "AAPGS Private Limited",
+      stack: ["Next.js", "MongoDB"],
+      desc: [
+        "Built a full-stack hotel and dining management system with separate client and admin applications.",
+        "Implemented admin modules for managing hotels, food items, categories, availability status, and image galleries.",
+        "Enabled dining reservation functionality with automated email notifications using Nodemailer.",
+        "Designed customizable email templates allowing admins to send manual or automated responses to users.",
+        "Implemented JWT cookie-based authentication with secure sign-up and sign-in flows for users and admins.",
+        "Optimized performance by implementing lazy loading for images using Intersection Observer API.",
+        "Reduced initial load time by optimizing menu and product data fetching strategies.",
+      ],
+    },
+    {
+      id: 4,
+      project: "E-Digicard – Digital Business Card Platform",
+      madeAt: "AAPGS Private Limited",
+      stack: ["Next.js", "MongoDB"],
+      desc: [
+        "Developed a multi-user digital business card platform with dynamic content rendering based on user IDs.",
+        "Built an admin panel to manage products and embed YouTube videos dynamically.",
+        "Implemented a feedback module to collect user responses and improve engagement.",
+        "Designed a scalable content structure to support multiple users and personalized profiles.",
+      ],
+    },
+    {
+      id: 5,
+      project: "OKR",
+      madeAt: "AAPGS Private Limited",
+      stack: ["Angular", "Node.js", "Express.js", "MongoDB", "Socket.io"],
+      desc: [
+        "Developed a real-time chat module supporting one-to-one chats, group chats, and contact lists.",
+        "Implemented real-time messaging using Socket.IO with support for images, files, and shared links.",
+        "Designed user profile views displaying grouped media such as images, files, and shared links for better UX.",
+        "Added emoji reactions, message editing, and delete functionality to improve chat usability.",
+        "Integrated browser notifications with sound alerts to notify users of new messages across the app.",
+        "Initialized global socket connections to ensure notifications work outside the active chat view.",
+      ],
+    },
+    {
+      id: 6,
+      project: "Expense Tracker",
+      madeAt: "AAPGS Private Limited",
+      stack: ["Node.js", "Express.js", "MongoDB", "Angular", "OneSignal"],
+      desc: [
+        "Developed backend APIs for a personal and group-based expense tracking application using Node.js and Express.",
+        "Collaborated with Flutter developers to design and implement APIs for dashboards, transactions, expenses, and group management.",
+        "Implemented group features including referral code invitations, shared expenses, and group transaction tracking.",
+        "Built notification infrastructure using OneSignal for real-time alerts and reminders.",
+        "Created cron-based APIs to trigger upcoming payment and expense reminders with push notifications.",
+        "Developed an Angular-based admin panel to manage custom expense categories dynamically.",
+        "Built an admin analytics dashboard displaying differentiated user metrics such as country-wise and gender-wise usage.",
+      ],
+    },
   ];
 
   const [openModal, setModalOpen] = useState(false);
@@ -169,62 +148,64 @@ export default function Projects() {
 
       <h1>All Projects</h1>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Project Name</th>
-            <th>Made At</th>
-            <th>Built with</th>
-          </tr>
-        </thead>
-        <tbody>
-          {projects.map((item) => {
-            return (
-              <tr key={item.id}>
-                <td>
-                  <div className="proj-th">
-                    {item.project}
-                    <button
-                      className="info-btn"
-                      onClick={() => OpenModal(item.id)}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="lucide lucide-info-icon lucide-info"
+      <div className="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Project Name</th>
+              <th>Made At</th>
+              <th>Built with</th>
+            </tr>
+          </thead>
+          <tbody>
+            {projects.map((item) => {
+              return (
+                <tr key={item.id}>
+                  <td>
+                    <div className="proj-th">
+                      {item.project}
+                      <button
+                        className="info-btn"
+                        onClick={() => OpenModal(item.id)}
                       >
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M12 16v-4" />
-                        <path d="M12 8h.01" />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-                <td> {item.madeAt} </td>
-                <td>
-                  {" "}
-                  <div className="skills-div-project">
-                    {item.stack.map((el, i) => {
-                      return (
-                        <div key={i} className="skills-chip">
-                          <p>{el} </p>
-                        </div>
-                      );
-                    })}{" "}
-                  </div>{" "}
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="lucide lucide-info-icon lucide-info"
+                        >
+                          <circle cx="12" cy="12" r="10" />
+                          <path d="M12 16v-4" />
+                          <path d="M12 8h.01" />
+                        </svg>
+                      </button>
+                    </div>
+                  </td>
+                  <td> {item.madeAt} </td>
+                  <td>
+                    {" "}
+                    <div className="skills-div-project">
+                      {item.stack.map((el, i) => {
+                        return (
+                          <div key={i} className="skills-chip">
+                            <p>{el} </p>
+                          </div>
+                        );
+                      })}{" "}
+                    </div>{" "}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
 
       {openModal && selected_project && (
         <div className="modal-overlay" onClick={CloseModal}>
