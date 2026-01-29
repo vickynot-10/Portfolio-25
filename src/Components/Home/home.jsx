@@ -26,7 +26,6 @@ changes.`,
 features, and user interfaces.`,
       ],
       skills: ["Angular", "Nextjs", "Nodejs", "ExpressJs", "MongoDB"],
-      isExperienceSection: true,
     },
     {
       year: "Dec 2024 - Mar 2025 ",
@@ -39,7 +38,6 @@ features, and user interfaces.`,
       ],
 
       skills: ["HTML", "CSS", "Bootstrap", "Javascript", "PHP"],
-      isExperienceSection: false,
     },
   ];
 
@@ -189,9 +187,7 @@ features, and user interfaces.`,
 
   const navigate = useNavigate();
 
-  function Navigate() {
-    navigate("/experience");
-  }
+ 
 
   return (
     <div style={{ height: "100%", width: "100%" }}>
@@ -315,9 +311,9 @@ features, and user interfaces.`,
             {experience.map((item, ind) => {
               return (
                 <div
-                  onClick={item.isExperienceSection && Navigate}
+                  
                   key={ind}
-                  className="experience-card c-poiner"
+                  className="experience-card"
                   ref={addToRefs}
                 >
                   <div>
